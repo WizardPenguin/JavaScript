@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Forms</title>
+</head>
+<body>
+    <h1>Sign up Form</h1> <br> 
+    <!-- action like GET or POST can be specified that decides how data goes to back end -->
+    <!-- value to input fields are given as data sent to server when they are acted upon some action -->
+    <!-- radio buttons are given same name when we want only 1 of then to be selected at a time -->
+    <!-- names are given that specifies which value is being getting sent -->
+    <!-- in submit button value is text specified on button -->
+    <form>
+        <label for="name"><strong>Name</strong></label><br>
+        <input type="text" id="name" name="name" placeholder="type Your Name"><br><br>
+        <input type="password" name = "password" placeholder="password"><br><br>
+        <input type="email" name="gmail" placeholder="abc@gmail.com"><br><br>
+
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" ><br>
+
+        <label for="female"> Female</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other"> <br>
+        <br>
+        <label for="country">Country&nbsp;</label><br>
+        <select name="country" id="country">
+            <option value="India">India</option><br>
+            <option value="Paistan">Pakistan</option><br>
+            <option value="China">China</option><br>
+        </select>
+        <br><br>
+        <label for="about-me">Write about Yourself: </label> <br> 
+        <textarea name="aboutMe" id="about-me" cols="30" rows="20" placeholder="Write your text here"></textarea>
+        <br><br>
+        <input type="submit" value="Submit Form">
+    </form>
+</body>
+</html>

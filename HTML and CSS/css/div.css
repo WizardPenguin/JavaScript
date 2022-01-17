@@ -1,0 +1,13 @@
+div{
+    background-color: lightgray;
+}
+.header{
+    margin-bottom: 20px;
+}
+.container p span {
+    background-color: lightgreen;
+}
+h1,h2{
+    color: green;
+}
+

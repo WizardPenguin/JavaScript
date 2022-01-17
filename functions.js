@@ -30,3 +30,24 @@ function hello(){
 // var hello = function(){
 //     console.log("hello")
 // }
+
+
+//// ### ([rest parameters]), when we don't know size of parameters then we can take some prefix of parameters as rest parameter
+function sumAll(a = 0,b = 0,...c){ // ## atlest 2 parameters are needed 
+    let sm = a + b 
+    for(let val of c){
+        sm += val
+    }
+    return sm; 
+}
+console.log("sum is",sumAll(1,2,3,4,5))
+
+/// Parameter destruction 
+// when we know that argument is going to be class and we are going to use some properties of it which needs destructuring then we can do that in definittion itself
+const point = {x: 4,y: 2}
+function product({x,y}){
+    return x*y;
+}
+console.log(point,product(point))
+
+/// callback functions ### functions that takes function as argument (these argument function as generally named as callback )

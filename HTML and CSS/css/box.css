@@ -1,0 +1,28 @@
+/* here we learnt that object insider box doesn't changes it's size when box sizes are change
+increase margin and padding increases box size instead
+also increasing border size affects box size to increase 
+heading padding needs increase since we had border in .box that caused that div to have more larger size
+ */
+
+.container{
+    /*add fonts and text color  */
+    /* padding causes element insider it to be in center */
+    padding:10px auto; 
+}
+.center{
+    margin: 20px auto;
+    width: 1400px;
+}
+.heading{
+    padding: 13px; 
+    background-color: lightgray;
+}
+.box{
+    padding: 10px; 
+    border: 3px solid lightblue; 
+    margin-bottom: 10px;
+}
+.box-title{
+    padding-bottom: 10px;
+    padding-top: 10px; 
+}
