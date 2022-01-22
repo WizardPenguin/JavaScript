@@ -1,0 +1,25 @@
+.nav{
+    text-align: center;
+    background-color: lightblue;
+}
+.nav li{
+    list-style: none;
+    display: inline-block;
+    color: black;
+    font-size: 2rem;
+    margin: 10px;
+    padding-top: 15px;
+}
+.nav li a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid lightpink;
+    /* to make cursor not to change cursor: pointer */
+}
+.with-line{
+    border-bottom: 2px solid steelblue;
+}
+.container{
+    width: 1600px;
+    margin: 10px auto;
+}
