@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+/* **************element styling **************** */
+ul li{
+    list-style: none;
+}
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+p,li{
+    font-size: 1.6rem;
+    letter-spacing: .14em;
+    margin-bottom: .5em;
+}
+h1,h2,h3{
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+/* ********* utility Classes ********* */
+.container{
+    max-width:1300px;
+    width: 90%;
+    /* to center elements insider it */
+    margin: 0 auto; 
+}
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    /* we want l-> r have more padding since we are making round sides */
+    padding: .5rem 1.5em;  
+    margin: .5em 0; 
+}
+.primary-btn{ 
+    background-color: #f4f4f4;
+    /* giving larger value to border radious makes it more circular  */
+    border-radius: 10em;
+}
+.secondary-btn{
+    border: .2rem solid #e63946;
+    border-radius: 1.5em;
+    color: #e63946;
+    background: #f4f4f4;
+}
+.primary-btn:hover{
+    background-color: #ddd;
+}
+.secondary-btn:hover{
+    background-color: #fcf3f2;
+}
+.lg-heading{
+    font-size: 3.5rem;
+}
+.md-heading{
+    font-size: 2.2rem; 
+}
+.text-red{
+    color: #e63946;
+}
+.text-light{
+    color: #f4f4f4;
+}
+.text-black{
+    color: #333; 
+}
+.bg-dark{
+    background-color: #263238;
+}

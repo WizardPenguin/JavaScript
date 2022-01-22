@@ -1,0 +1,119 @@
+/* **********************  nav styling ********************** */
+.nav-bar .logo{
+    color: white;
+    float: left;
+    margin-top: .5em;
+}
+.nav-bar .nav-items{
+    float: right;
+}
+.nav-bar:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.nav-bar{
+    padding: 2em;
+}
+.nav-bar .nav-item{
+    display: inline-block;
+    padding: 2em 1em;
+}
+.nav-item a:link,
+.nav-item a:visited{
+    color: #f4f4f4;
+}
+.nav-item a{
+    padding-bottom: .5em;
+    text-transform: uppercase;
+}
+.nav-item a:hover{
+    border-bottom: .3rem solid white;
+}
+/* ********************** about box styling ********************** */
+.about{
+    padding: 6em;
+}
+.about-heading{
+    border-bottom: 4px solid red;
+}
+.lists{
+    text-align: center;
+}
+.list li::before{
+    content: '\2713';
+    font-weight: bold;
+    color: red;
+    padding-right: .4em;
+}
+.list{
+    color: black;
+    padding: 2em;
+}
+.list-right{
+    width: 50%;
+    float: right;
+}
+.list-left{
+    width: 50%;
+    float: left;
+}
+.lists::after{
+    content: ""; 
+    clear: both;
+    display: block;
+}
+/* *************** styling achievements *************** */
+.achieve .lg-red-heading{
+    color: red;
+    font-size: 3rem;
+    font-weight: 700; 
+}
+.achieve .bold-achivement{
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.achieve{
+    float: left;
+    width: 25%;
+    padding-top: 3em;
+    padding-bottom: 5em;
+    text-align: center;
+}
+.achievements::after{
+    content: ""; 
+    clear: both;
+    display: block;
+}
+/* ****************** invitation to contact us ******************** */
+.contact{
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 2rem;
+}
+.text-contact{
+    color: white;
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 700;
+    word-spacing: .5em;
+    padding-left: 10em;
+    padding-top: 1.6em;
+}
+.btn-contact{
+    color: white;
+    float: right;
+    padding: 1em 2em;
+    border: 3px solid white;
+    word-spacing: .5em;
+    letter-spacing: .4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.contact::after{
+    content: "";
+    clear: both;
+    display: block
+}
