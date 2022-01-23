@@ -1,8 +1,10 @@
-/* default flex moves it's items from left to right 
-to make a flex container just give is attribute
-it gives them equal width by default 
-giving explicit width that don't fit in container doesn't applies on them 
-we need to wrap content 
+/* 
+    flex direction : container property 
+    row : l -> r
+    row-reverse : r -> l 
+    column : up -> donw
+    column-reverse : down -> up 
+    decides from which direction items start putted in container, alter's main axis direction
  */
 
 
@@ -10,6 +12,7 @@ we need to wrap content
     background-color: bisque;
     border: 2px solid red;
     display: flex;
+    flex-direction: column-reverse;
 }
 .box-container div[class ^= "box-"]{
     border: 2px solid #ddd;
