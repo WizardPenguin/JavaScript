@@ -1,21 +1,18 @@
-/*
-    now we need to deal with space left after adding boxes
-    space could be along main axis or cross axis 
-    for main-axis :
-        we need to use justify-content
-    for cross-axis :
-        we need to use align-content (align-items was used position of single row along cross-axis)
- */
+/* 
+    Property of flex items: 
+    align-self : it overrides the property of align-items for perticular box 
+    align-content : it also does work like align-items but for many rows in cross axis so this might override
+*/
 .box-container{
     height: 700px;
     background-color: bisque;
     border: 2px solid red;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
-    align-items: flex-start; 
+    flex-wrap: wrap-reverse; 
+    align-items: center; 
     justify-content: space-around;
-    align-content: center;
+    align-content: space-around;
 }
 
 .box-container div[class ^= "box-"]{
@@ -29,6 +26,7 @@
     background-color: lightgoldenrodyellow;
 }
 .box-3{
+    /* now box is attached to start instead of being in center */
     background-color: lightsalmon;
 }
 .box-4{
