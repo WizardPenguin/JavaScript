@@ -18,6 +18,7 @@ their default value if 1 so space is evently distributed among all elements
     width: 300px;
     /* after we have achieved given width only then increase and decrease happens */
     /* when given width coundn't be accomodated only after then shirking works */
+    /* but if flex-wrap is ON then shrink might now work since it auto gives it a new row instead of shrinking */
 }
 .box-1{
     background-color: lightblue;
