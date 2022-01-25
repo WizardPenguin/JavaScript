@@ -1,40 +1,42 @@
 /* 
-flex-basis: 
-has higher property than width 
-initial length on main axis might convert to width, height based on axis 
-it's a approx length, if this width can't be provided then this length is ignored 
+flex-grow: to adjust extra space 
+flex-shrinks: to adjust length/width when disired space it not provided for boxes
+are other mechanisms of providing length and height adjustments 
+it gives how many times it should grow or shrink
+their default value if 1 so space is evently distributed among all elements  
 */
 .box-container{
-    height: 700px;
     background-color: bisque;
     border: 2px solid red;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
-    align-items: center; 
-    justify-content: space-around;
+    /* flex-wrap: wrap;  */
 }
 .box-container div[class ^= "box-"]{
     border: 2px solid #ddd;
     padding: 1rem;
-    width: 200px;
+    width: 300px;
+    /* after we have achieved given width only then increase and decrease happens */
+    /* when given width coundn't be accomodated only after then shirking works */
 }
 .box-1{
     background-color: lightblue;
     order: 1;
+    flex-grow: 2;
 }
 .box-2{
     background-color: lightgoldenrodyellow;
+    flex-shrink: 2;
 }
 .box-3{
     background-color: lightsalmon;
     order: 1;
-    flex-basis:300px;
 }
 .box-4{
     background-color: lightyellow;
+    flex-grow: 2;
 }
 .box-5{
     background-color: lightpink;
-    flex-basis: 500px;
+    flex-shrink: 2;
 }
