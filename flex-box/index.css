@@ -1,22 +1,23 @@
 /* 
-// we can change order of items by giving them property order: 
-// lower order first they get their place in flex-box
-// if same order then html order is taken to resolve problems 
- */
+flex-basis: 
+has higher property than width 
+initial length on main axis might convert to width, height based on axis 
+it's a approx length, if this width can't be provided then this length is ignored 
+*/
 .box-container{
     height: 700px;
     background-color: bisque;
     border: 2px solid red;
     display: flex;
-    flex-direction: row; /*  items are placed -> in row then mores in wrapping direction */
+    flex-direction: row;
     flex-wrap: wrap; 
     align-items: center; 
     justify-content: space-around;
 }
-/* now placement order is box2 box4 box5 after then box1 and box3 are placed respectively  */
 .box-container div[class ^= "box-"]{
     border: 2px solid #ddd;
     padding: 1rem;
+    width: 200px;
 }
 .box-1{
     background-color: lightblue;
@@ -28,10 +29,12 @@
 .box-3{
     background-color: lightsalmon;
     order: 1;
+    flex-basis:300px;
 }
 .box-4{
     background-color: lightyellow;
 }
 .box-5{
     background-color: lightpink;
+    flex-basis: 500px;
 }
