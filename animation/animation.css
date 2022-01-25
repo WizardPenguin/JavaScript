@@ -1,0 +1,71 @@
+/* 
+important steps 
+define animation name 
+give it's duration 
+after then define animation using keyframes
+ 
+some other properties are 
+dealy
+fill-mode : forwards means after animation ends it don't go to start step again 
+direction: forward/backward/alternate tells how animation starts each time 
+iteration-count: how many times animation repeats
+timing-function: ease-in,ease-out,ease-in-out makes start/end/both smooth 
+*/
+
+
+div[class^="box"]{
+    width: 100px;
+    height: 100px;
+}
+.box1{
+    background-color: blueviolet;
+    animation-name: change-color;
+    animation-delay: 3s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+}
+@keyframes change-color{
+    from{
+        background-color: violet;
+    }
+    to{
+        background-color: wheat;
+    }
+}
+
+.box2{
+    margin: 200px auto;
+    background-color:tomato ;
+    position: relative; 
+    /* means top , left , bottom , right vlaues moves it w.r.t origin position */
+    animation: move-around;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes move-around{
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 0px;
+        left: 500px;
+    }
+    50%{
+        top:500px;
+        left: 500px;
+    }
+    75%{
+        top:500px;
+        left: 0px;
+    }
+    100%{
+        top:0px; 
+        left:0px; 
+    }
+}
+
