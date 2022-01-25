@@ -1,0 +1,17 @@
+/* transition : on some event change in properties are timed using this 
+e.g. on hover background becomes darker, instantly 
+if we want it to become more smoother then transition can be applied on it */
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    /* transition-property: background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out; */
+    /* if we write transition here then initial yellow color also comes with transition
+    instead apply it on exact even where transition required */
+}
+.box:hover{
+    background-color: red;
+    transition: background-color 3s ease-in-out;
+}
