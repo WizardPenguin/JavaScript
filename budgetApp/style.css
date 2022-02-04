@@ -1,0 +1,156 @@
+/* we are using naming conventions work-type, eg entry-form, name-list name-item etc */
+/* ********************* global styling **************************** */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fbf7f7fa;
+}
+ul{
+    list-style: none;
+}
+h1,h3,h2{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+label{
+    display: block;
+    font-size: 2rem;
+    margin: .7em .1em;
+}
+input{
+    display: block;
+    font-size: 1.8rem;
+    width: 100%;
+    padding: .2em;
+}
+.btn{
+    display: block;
+    font-size: 2rem;
+    margin: .4em 0em;
+    border: none;
+    outline: none;
+    padding: .2em .8em;
+    border-radius: .8em;
+    font-weight: medium;
+    width: initial;
+    cursor: pointer;
+}
+.container{
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ********************************* entry having entry form and output ************************** */
+.heading{
+    margin-top: 1em;
+    margin-bottom: 1.6em;
+    font-size: 2.8rem;
+}
+.entry{
+    display: flex;
+    height: 25vh;
+}
+.entry-form{
+    box-shadow: 0px 0px 6px 1px green;
+    width: 30%;
+    padding: 1em;
+}
+.entry-form label{
+    padding-top: .2em;
+}
+.entry-form input{
+    box-shadow: 0px 0px 3px 1px green;
+}
+.entry-form input:focus{
+    outline: none;
+    box-shadow: 0 0 10px #719ECE;
+}
+.entry-btn{
+    box-shadow: 0px 0px 2px 1px green;
+    color: green;
+}
+/* *********************************** output ***************************************** */
+.output{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 2rem;
+}
+.output i{
+    color: blue;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: .5em;
+}
+.budget p{
+    color: green;
+}
+.expence p{
+    color: red;
+}
+.balance p{
+    color: black;
+}
+/* ******************** expences having expences-form and expences-list that need to work under js ********* */
+.expenses{
+    height: 40vh;
+    display: flex;
+}
+.expences-form{
+    box-shadow: 0px 0px 6px 1px red;
+    padding: 1em;
+    width: 30%;
+}
+.expences-form input{
+    box-shadow: 0px 0px 3px 1px red;
+}
+.expences-form input:focus{
+    outline: none;
+    box-shadow: 0 0 10px #719ECE;
+}
+.expences-btn{
+    box-shadow: 0px 0px 2px 1px red;
+    color: red;
+}
+.expences-list{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.title-list li,
+.value-list li,
+.button-list li{
+    color: red;
+    font-size: 1.6rem;
+    padding: .4em 0em;
+}
+.button-list li i[class ^= "fas"]{
+    color: blue;
+    cursor: pointer;
+}
+.button-list li i[class ^= "far"]{
+    color: green;
+    cursor: pointer;
+}
+/* ************************ footer ******************** */
+.footer{
+    display: inline-block;
+    height: 4vh;
+    padding: .4em 2em;
+    background-color: rgba(245, 6, 6, 0.424);
+    color: white;
+    margin-top: 2em;
+    width: 30%;
+    border-radius: 2em;
+}
+.footer p{
+    display: inline;
+}

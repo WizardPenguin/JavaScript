@@ -1,0 +1,4 @@
+application allows to add budget list and then estimate cost 
+goals:
+    make scroll available for budget list so it don't move out of screen
+    when pressed enter it auto goes to next input field which requires to be filled

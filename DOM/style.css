@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    background: #015581;
+    color: white;
+}
+.header{
+    background: url("./pexels-roberto-nickson-2885320.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 60vh;
+    color: white;
+    position: relative;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+.nav-items{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.nav-item{
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+.headline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.btn-headline{
+    padding: .4rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.section-todo{
+    margin-top: 3rem;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+.form-todo{
+    margin-top: 3rem;
+    height: 4.5vh;
+    display: flex;
+    justify-content: space-between;
+}
+.form-todo input[type="text"]{
+    width: 78%;
+    font-size: 1.6rem;
+    padding: .4rem;
+    border-radius: .5rem;
+}
+.btn-todo{
+    padding: .4rem 1.4rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    width: 20%;
+}
+.list-todo{
+    list-style: none;
+    margin-top: 1.5rem;
+}
+.todo-item{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: #444;
+    color: white;
+    text-transform: capitalize;
+    border: 2px solid black;
+}
+.todo-item .text{
+    padding: .7rem;
+    font-size: 1.6rem;
+}
+.todo-btn .btn{
+    font-size: 1.5rem;
+    padding: .5rem 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.section-signup{
+    background: rgba(0, 0, 0, 0.164);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.input-form{
+    width: 80%;
+    margin: auto;
+}
+.input-form h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.input-form label,
+.input-form input{
+    display: block;
+}
+.form-group{
+    margin-bottom: .6rem;
+    width: 100%;
+}
+.form-group input{
+    width: 100%;
+    font-size: 1rem;
+    padding: .4rem;
+    border-radius: .2rem;
+}
+.form-group label{
+    margin-bottom: .4rem;
+}
+textarea{
+    width: 100%;
+    font-size: 1rem;
+    border-radius: .2rem;
+}
+.btn-submit{
+    padding: .2rem 1.4rem;
+    font-size: 1.4rem;
+    display: block;
+    margin: auto;
+    border-radius: .2rem;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./addTodo.js" defer></script>
+    <script src="https://kit.fontawesome.com/e5d6bea458.js" crossorigin="anonymous"></script>
+    <title>Sample Website</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <h1 class="logo">Website</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="">Home </a></li>
+                <li class="nav-item"><a href="">TODO </a></li>
+                <li class="nav-item"><a href="">SignUp</a></li>
+            </ul>
+        </nav>
+        <section class="headline container">
+            <h2>Manage Your task</h2>
+            <button class="btn btn-headline">
+                Learn More
+            </button>
+        </section>
+    </header>
+    <section class="section-todo container">
+        <h2>Your plan for today?</h2>
+        <form action="" class="form-todo">
+            <input type="text" name="todo" placeholder="Add to todo">
+            <input type="submit" value="ADD TODO" class="btn btn-todo">
+        </form>
+        <!-- now we need html element that can contain our todo list -->
+        <ul class="list-todo">
+            <li class="todo-item">
+                <div class="text">click add todo to add new item</div>
+                <div class="todo-btn">
+                    <button class="btn done" title="done">
+                        <i class="fas fa-clipboard-list"></i>
+                    </button>
+                    <button class="btn remove" title="remove">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="section-signup container">
+        <form action="" class="input-form">
+            <h1>Sign Up</h1>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password">
+            </div>
+            <div class="form-group">
+                <label for="aboutme">About Yourself</label>
+                <textarea name="aboutme" id="aboutme" cols="30" rows="10" placeholder="Write about yourself"></textarea>
+            </div>
+            <input type="submit" value="submit" class="btn btn-submit">
+        </form>
+    </section>
+</body>
+</html>
