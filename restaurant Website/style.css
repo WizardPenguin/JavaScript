@@ -1,0 +1,389 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    padding: 1em 2.5em;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-primary{
+    color: white;
+    background-color: #16a083;
+}
+/* ******************************************* navbar styling *****************************************  */
+.nav-container input,
+.nav-container .hamburger-lines{
+    display: none; 
+}
+.navbar{
+    width: 100%;
+    box-shadow: 0px 5px 10px 0px #aaa;
+    /* when it comes out of document flow then it needs to give width explicitly since it don't know till where to extend */
+    position: fixed;
+    z-index: 10;
+    color: #000;
+    opacity: .85;
+    background: white;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+.nav-list{
+    flex: 2;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+}
+.logo{
+    flex: 1;
+    order: 1;
+    font-size: 3rem;
+}
+.nav-list a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #444;
+}
+.nav-list a:hover{
+    color: #117964;
+}
+/* ****************************** showcase area ********************************** */
+#showcase{
+    background: linear-gradient(rgba(240,240,240,.144),rgba(255,255,255,.330)) ,url(./img-20220205T092330Z-001/img/header-image2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.showcase-container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align item required otherwise it takes whole width in this case  */
+    text-align: center;
+    align-items: center;
+}
+.showcase-container h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.showcase-container p{
+    font-size: 1.6rem;
+    color: #444;
+}
+/* ************************** about section *************************** */
+#about{
+    margin: 5rem 0 6rem 0;    
+    background-color: #f5f5f7;
+}
+.about-container{
+    display: flex;
+    /* so when size reduced and image flex = 400 couldn't adjust then auto goes to next row */
+    flex-wrap: wrap;
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 2rem;
+    animation: left-right 1s ease-in-out forwards;
+}
+@keyframes left-right{
+    from{
+        transform: translateX(-150%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.about-text .heading{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600;
+}
+.about-text p{
+    font-size: 1.6rem;
+    color: #555;
+}
+.about-text h2{
+    font-size: 3.2rem;
+    padding: .5em 0;
+}
+.about-container img{
+    /* border: 2px solid black; */
+    display: block;
+    flex: 1 1 400px;
+    padding: 2rem;
+    /* this is required when on mobile it goes in next row then 400 ht respective width might cause problem so fix it */
+    max-width: 100%;
+    object-fit: cover;
+    object-position: right;
+    /* helps to adjust image with comparatibely smaller width so dont' go on next row */
+    height: 400px;
+    animation: right-left 1s ease-in-out forwards;
+}
+@keyframes right-left{
+    from{
+        transform: translateX(150%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+/* ****************************** food category menu ***************************************** */
+#food{
+    margin: 3rem 0 10rem 0;
+}
+#food h2{
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+.food-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+.image-container{
+    margin: 1rem;
+    position: relative;
+}
+.image-container img{
+    display: inline-block;
+    width: 100%;
+    max-height: 300px;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.image-container::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63);
+    z-index: 1;
+
+
+    opacity: 0;
+    transform: scaleY(0); /* this causes height = 0 which can act upon transition when hovered center to outwards  */
+    /* change center to bottom makes it transition from bottom to top */
+    transform-origin: 100% 100%;
+    transition: all .3s ease-in-out;
+}
+.image-container .image-content{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+
+    opacity: 0;
+    top: 70%;
+    transition: all .3s ease-in-out;
+}
+.image-container h3{
+    font-weight: 500;
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 1em;
+}
+.image-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1); 
+}
+.image-container:hover .image-content{
+    opacity: 1;
+    top: 50%;
+}
+/* *************************** food menu ************************************ */
+#food-menu{
+    margin: 2rem 0 2rem 0;
+}
+#food-menu h1{
+    font-size: 3rem;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2em;
+}
+.menu-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu-image-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    max-width: 100%;
+    padding: 1.5rem 0;
+}
+.menu-image img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.menu-image-content{
+    padding: 1rem;
+    text-align: left;
+}
+.menu-image-container h3{
+    font-size: 2rem;
+    color: #555;
+    margin: .6em 0;
+}
+.menu-image-container p{
+    font-size: 1.6rem;
+    color: #444;
+}
+.menu-image-container .price{
+    color: #117964;
+    font-weight: 700;
+}
+
+/* ************************************* reviews ********************************************* */
+#reviews{
+    padding: 5rem 0 8rem 0;
+    
+}
+#reviews h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #555;
+    margin: 1.5em;
+}
+.review-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review{
+    padding: 1rem;
+    text-align: center;
+}
+.review .checked{
+    font-size: 1.6rem;
+    padding-bottom: 1em;
+    color: #ff9529;
+}
+.review img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 1rem;
+}
+.review p{
+    font-size: 1.6rem;
+    color: #444;
+}
+
+/* ***************************************** contact form ************************************ */
+#contact{
+    padding: 5rem 0;
+    background-color: rgb(226,226,226);
+}
+.contact-container{
+    display: flex;
+    background-color: #fff;
+}
+.contact-container .contact-image{
+    width: 50%;
+}
+.contact-image img{
+    display: block;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.contact-form{
+    padding: 1rem;
+    width: 50%;
+    height: 100%;
+    /* margin: auto; */
+}
+.contact-form h1{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #444;
+}
+.contact-form input{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    border: none;
+    display: block;
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    color: #555;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.contact-container textarea{
+    font-size: 1.6rem;
+    color: #555;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    height: 170px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ddd;
+}
+#footer h1{
+    font-size: 2rem;
+    padding: 3rem;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(65, 65, 65);
+}
