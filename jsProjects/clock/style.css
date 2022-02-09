@@ -1,0 +1,29 @@
+.container{
+    height: 100vh;
+    background: linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.712),rgba(0, 0, 0, 0.267)
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 48%;
+    border: 10px solid white;
+    padding: 4px;
+    position: relative;
+}
+.hand{
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: white;
+    top: 50%;
+    transform-origin: 100%;
+    /* transform: translateY(-4px); */
+    transform: rotate(90deg);
+    transition: all .5s cubic-bezier(0,2.34,.58,1);
+}
