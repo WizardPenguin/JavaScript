@@ -1,0 +1,29 @@
+:root{
+    --clr : #33ff33;
+    --wth : 25vw;
+    --bdr : 4px;
+}
+.body{
+    background: linear-gradient(to right,blue,green,yellow);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+}
+.box{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.display{
+    background-color: var(--clr);
+    width: var(--wth);
+    height: 50%;
+    border: var(--bdr) solid black;
+}

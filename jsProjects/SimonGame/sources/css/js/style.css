@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #011F3F;
+    width: 100vw;
+    height: 100vh;
+    transition: background-color .2s ease-in-out;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+    padding: 3rem;
+    color: #FEF2BF;
+}
+.row{
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 8px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+#green{
+    background-color: green;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
+.clicked-blue#blue{
+    border-color: rgba(0, 0, 255, 0.753);
+    background-color: white;
+}
+.clicked-red#red{
+    border-color: rgba(255, 0, 0, 0.726);
+    background-color: white;
+}
+.clicked-yellow#yellow{
+    border-color: rgba(255, 255, 0, 0.726);
+    background-color: white;
+}
+.clicked-green#green{
+    border-color: rgba(0, 128, 0, 0.712);
+    background-color: white;
+}
+.game-over{
+    background-color: rgba(255, 0, 0, 0.692);
+}
+.show{
+    box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.767);
+}
